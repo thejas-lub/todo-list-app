@@ -1,0 +1,19 @@
+useState vs AsyncStorage (200–300 words)
+
+In this To-Do List project, I used both useState and AsyncStorage, and each serves a different purpose.
+ useState is a React Hook used to store and manage data while the application is running. 
+ It allows the app to update the user interface whenever the data changes. 
+ For example, when I add a new task, delete a task, mark a task as completed, or change the filter, 
+ the useState hook updates the task list immediately without refreshing the application. However, 
+ the data stored in useState exists only while the app is open. If the application is closed, the data stored in useState is lost.
+
+AsyncStorage, on the other hand, is used for permanent local storage. It stores data on the device so that
+ it remains available even after the application is closed or restarted. In this project, I used AsyncStorage
+  to save the task list whenever changes were made. When the app starts again, the saved tasks are loaded from 
+  AsyncStorage and displayed automatically. This gives the user a better experience because they do not lose their tasks
+   after reopening the app.
+
+In summary, useState is used for temporary state management during the app's execution, while AsyncStorage is used for
+ persistent storage that keeps data available across app sessions. Both technologies work together in this 
+ project: useState provides fast and responsive updates to the interface, and AsyncStorage ensures that the user's tasks
+  are safely stored and restored whenever the application is reopened.
